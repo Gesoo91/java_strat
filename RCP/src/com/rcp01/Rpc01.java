@@ -4,64 +4,66 @@ import java.util.Scanner;
 
 public class Rpc01 {
 	void run() {
-		//void´Â Â÷ÈÄ ¼³¸í¿¹Á¤		
+		//voidëŠ” ì°¨í›„ ì„¤ëª…ì˜ˆì •		
 		int com = 0;
 		
-		//int player = 1;//ÇÃ·¹ÀÌ¾îÀÇ °ªÀ» ÀÔ·Â¹Ş¾Æ¼­ °ÔÀÓ½ÇÇàÇÏ±â·Î º¯°æ
+		//int player = 1;//í”Œë ˆì´ì–´ì˜ ê°’ì„ ì…ë ¥ë°›ì•„ì„œ ê²Œì„ì‹¤í–‰í•˜ê¸°ë¡œ ë³€ê²½
 		Scanner sc = new Scanner(System.in); 
-		//¿¡·¯¹ß»ı. Scanner Å¬·¡½º°¡ Å¸ÀÔÀÌ Á¤ÀÇµÇÁö ¾ÊÀ½. importÇÏ¿© »ç¿ë(ÃßÈÄ¿¡ ¼³¸í) ³»ÀåÅ¬·¡½º Áß¿¡ ±×³É »ç¿ë°¡´ÉÇÑ°Ô ÀÖ°í ÀÌ·¸°Ô ¸¸µç ³à¼®Àº ÀÓÆ÷Æ® ÇÊ¿äÇÑµí
-//		ctrl+shift+o = ÀÚµ¿ ÀÓÆ÷Æ® ´ÜÃàÅ°  È¤Àº ¸¶¿ì½º ¿À¹öÇØ¼­ ÀÓÆ÷Æ® Å¬¸¯
-		String cmd = sc.next();
-//		sc¸¦ ½ÇÇàÇÏ¸é ÀÔ·Â´ë±â»óÅÂ°¡ µÈ´Ù.
-//		System.out.println(cmd); //½ÇÇà½ÃÄÑº¸¸é console¿¡¼­ ÀÔ·Â°¡´É, ÀÔ·ÂÇÏ¸é ÀÔ·Â°ª ³ª¿Â´Ù.
+		//ì—ëŸ¬ë°œìƒ. Scanner í´ë˜ìŠ¤ê°€ íƒ€ì…ì´ ì •ì˜ë˜ì§€ ì•ŠìŒ. importí•˜ì—¬ ì‚¬ìš©(ì¶”í›„ì— ì„¤ëª…) ë‚´ì¥í´ë˜ìŠ¤ ì¤‘ì— ê·¸ëƒ¥ ì‚¬ìš©ê°€ëŠ¥í•œê²Œ ìˆê³  ì´ë ‡ê²Œ ë§Œë“  ë…€ì„ì€ ì„í¬íŠ¸ í•„ìš”í•œë“¯
+//		ctrl+shift+o = ìë™ ì„í¬íŠ¸ ë‹¨ì¶•í‚¤  í˜¹ì€ ë§ˆìš°ìŠ¤ ì˜¤ë²„í•´ì„œ ì„í¬íŠ¸ í´ë¦­
+//		ì—ëŸ¬ëŠ” ì‹¤í–‰ë¶ˆê°€, ë¹¨ê°„ë¶ˆ  ì˜¤ë¥˜ëŠ” ì‹¤í–‰ì€ê°€ëŠ¥
 		
-//		ctrl+m Àº ÀüÃ¼È­¸é
+		String cmd = sc.next();
+//		scë¥¼ ì‹¤í–‰í•˜ë©´ ì…ë ¥ëŒ€ê¸°ìƒíƒœê°€ ëœë‹¤.
+//		System.out.println(cmd); //ì‹¤í–‰ì‹œì¼œë³´ë©´ consoleì—ì„œ ì…ë ¥ê°€ëŠ¥, ì…ë ¥í•˜ë©´ ì…ë ¥ê°’ ë‚˜ì˜¨ë‹¤.
+		
+//		ctrl+m ì€ ì „ì²´í™”ë©´
 		String result = "";
 		
 		xx:
 		while(true) {
 
-			System.out.println("°¡À§ ¹ÙÀ§ º¸~!");
-			System.out.println("==x¸¦ Ä¡¸é °ÔÀÓ Á¾·á~!==");	
-			com = (int)(Math.random()*3+1); //java¿¡¼­ ·£´ı°ª ¹Ş±â. 1~3³ª¿À°Ô ÇÔ. °¡À§=1, ¹ÙÀ§=2, º¸=3
+			System.out.println("ê°€ìœ„ ë°”ìœ„ ë³´~!");
+			System.out.println("==xë¥¼ ì¹˜ë©´ ê²Œì„ ì¢…ë£Œ~!==");	
+			com = (int)(Math.random()*3+1); //javaì—ì„œ ëœë¤ê°’ ë°›ê¸°. 1~3ë‚˜ì˜¤ê²Œ í•¨. ê°€ìœ„=1, ë°”ìœ„=2, ë³´=3
 			
 			switch(cmd) {
-			case "°¡À§":
+			case "ê°€ìœ„":
 				switch(com) {
 				case 1:
-					result = "ºñ°å´Ù!";
+					result = "ë¹„ê²¼ë‹¤!";
 					break;
 				case 2:
-					result = "Á³´Ù!";
+					result = "ì¡Œë‹¤!";
 					break;
 				case 3:
-					result = "ÀÌ°å´Ù!";
+					result = "ì´ê²¼ë‹¤!";
 					break;
 				}
 				break;
-			case "¹ÙÀ§":
+			case "ë°”ìœ„":
 				switch(com) {
 				case 1:
-					result = "ÀÌ°å´Ù!";
+					result = "ì´ê²¼ë‹¤!";
 					break;
 				case 2:
-					result = "ºñ°å´Ù!";
+					result = "ë¹„ê²¼ë‹¤!";
 					break;
 				case 3:
-					result = "Á³´Ù!";
+					result = "ì¡Œë‹¤!";
 					break;
 				}
 				break;
-			case "º¸":
+			case "ë³´":
 				switch(com) {
 				case 1:
-					result = "Á³´Ù!";
+					result = "ì¡Œë‹¤!";
 					break;
 				case 2:
-					result = "ÀÌ°å´Ù!";
+					result = "ì´ê²¼ë‹¤!";
 					break;
 				case 3:
-					result = "ºñ°å´Ù!";
+					result = "ë¹„ê²¼ë‹¤!";
 					break;
 				}
 				break;
@@ -71,22 +73,22 @@ public class Rpc01 {
 			String comStr = "";
 			switch(com) {
 			case 1:
-				comStr = "°¡À§";
+				comStr = "ê°€ìœ„";
 				break;
 			
 			case 2:
-				comStr = "¹ÙÀ§";
+				comStr = "ë°”ìœ„";
 				break;
 		
 			case 3:
-				comStr = "º¸";
+				comStr = "ë³´";
 				break;
 	}
-			System.out.println("³»°¡ ³½ °Í:"+cmd);
-			System.out.println("ÄÄÇ»ÅÍ°¡ ³½ °Í:"+comStr);
-			System.out.println("°á°ú:"+result);
+			System.out.println("ë‚´ê°€ ë‚¸ ê²ƒ:"+cmd);
+			System.out.println("ì»´í“¨í„°ê°€ ë‚¸ ê²ƒ:"+comStr);
+			System.out.println("ê²°ê³¼:"+result);
 			cmd = sc.next();
 		}
-		System.out.println("°ÔÀÓ Á¾·á!");
+		System.out.println("ê²Œì„ ì¢…ë£Œ!");
 	}
 }
