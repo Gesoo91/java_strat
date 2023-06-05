@@ -3,7 +3,7 @@ package com.kdj.board.menu;
 import com.kdj.board.util.*;
 public class Menu {
 
-	public static void run() {
+	public void run() {
 	loop:
 		while(true) {
 			String cmd = Sc.r("입력");
@@ -19,6 +19,9 @@ public class Menu {
 				break;
 			case "4":
 				Delete.run();
+				break;
+			case "5": //수정하기 추가
+				Revise.run();
 				break;
 			case "e":
 				System.out.println("종료합니다.");

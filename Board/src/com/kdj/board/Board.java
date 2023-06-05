@@ -1,5 +1,4 @@
 package com.kdj.board;
-import com.kdj.board.data.DataBox;
 //menu를 다른 페키지에 만들어서 전체임포트해줌.
 import com.kdj.board.menu.*;
 
@@ -38,8 +37,18 @@ import com.kdj.board.menu.*;
         Delete에서 DataBox.list.get(index).hide(); // 요소를 숨김 상태로 변경 를 주어 감추기 //테스트 아직안함
         
  *============================ver.4================================================
- *~~
+ *수정기능 추가 완료.
+ *Board에 5.글수정 추가.
+ *Revise클래스에 for문을 통한 데이터박스에서 검색기능 및 글번호 기입하여 선택하게 하기는 동일.
+ *if문으로 동일할 때 content값을 입력하고, 그 값이 content가 되도록 함.
  *
+ *ver3에서 생각햇던 삭제->한척하고 감춰둠 상태로 만드는 것 구현.
+ *hidden값을 주어 boolean true false 상태로 보이기 안보이기 함.
+ *List,Delete에서 감춘 것 안보이게 출력되도록 바꿈.
+ *List에서는 if문에 isHidden값과 다르다면 출력, 같다면 출력되지않게함.
+ *Delete에서는 isHidden값과 다르다면 카운트하는 함수를 추가하여 남은 갯수 나오게 함.
+ *View에서는 cmd로 입력된 문자열을 정수로 변환하는 것을 적용. 그 값으로 입력된 글번호를 정확히 비교하게 함.
+ *found 변수로 찾는 글의 여부를 나누고 글 삭제, 글없음 등을 구현.
  *
  * */
 
@@ -48,9 +57,11 @@ public class Board {
 	public void run() {
 //		DataBox.loadData(); //이게 없으면 Exception in thread "main" java.lang.NullPointerException 뜨면서 실행이 안된다. 왜?? null값 초기화가안되서. DataBox에서 직접 초기화코드를 입력하여 이걸 안쓰고 해봣다.
 		System.out.println("게시판");
-		System.out.println("1.글쓰기 2.글목록 3.글보기 4.글지우기 e.종료"); //todo:글쓰기를 만들어서 글목록에 넣을수 있게 해야함
+		System.out.println("1.글쓰기 2.글목록 3.글보기 4.글지우기 5.글수정 e.종료"); //todo:글쓰기를 만들어서 글목록에 넣을수 있게 해야함
 //		System.out.println("명령:");//Ci확인하면 됨.
-		Menu.run();
+//		Menu.run();
+		Menu menu = new Menu();
+		menu.run();
 		
 	}
 }
