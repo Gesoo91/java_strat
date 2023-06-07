@@ -31,3 +31,25 @@ public class Hashmap {
 	
  }
 }
+
+/*
+List:
+	ArrayList	// 순서(index) 있는 배열				
+	Vector	// 성능차이만 있음				
+	LinkedList	// 성능차이만 있음				
+					
+Set:
+	HashSet	// 순서 없는 집합, 중복저장이 안됨		꺼낼 때 귀찮게	이런식
+		Iterator<String> it = s.iterator();
+		System.out.println("-while, next() 으로 꺼내기-");
+		while(it.hasNext()) {
+			String s1 = it.next();
+			System.out.println(s1);
+		}
+			으로 꺼내야함
+	TreeSet	// 성능차이만 있음	이진 탐색 트리(BinarySearchTree) 구조			
+					
+Map:
+	HashMap	// 키, value 형태로 저장하는 배열	-나중에 중요한 개념으로 써먹으니 기억해두기.(데이터접근시)			
+	Hashtable	// 성능차이만 있음				
+*/
